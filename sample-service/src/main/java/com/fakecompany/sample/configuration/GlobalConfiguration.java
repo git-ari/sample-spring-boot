@@ -32,11 +32,11 @@ public class GlobalConfiguration {
 
     @Bean
     public Docket api() {
-        Contact contact = new Contact("API Support", "support@example.com", "http://example.com/support");
+        Contact contact = new Contact("", "", "");
 
         return new Docket(DocumentationType.SWAGGER_2)
-                .apiInfo(new ApiInfo(title, description, version, "http://www.appsdeveloperblof.com/service.html", contact,
-                        "Apache 2.0", "http://www.apache.org/licenses/LICENSE-2.0", new ArrayList<>()))
+                .apiInfo(new ApiInfo(title, description, version, "", contact,
+                        "", "", new ArrayList<>()))
                 .select()
                 .apis(RequestHandlerSelectors.basePackage(basePackage))
                 .paths(PathSelectors.any())

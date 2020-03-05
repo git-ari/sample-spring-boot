@@ -1,5 +1,4 @@
 package com.fakecompany.sample.domain;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,14 +10,10 @@ import java.time.OffsetDateTime;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
+public class Error {
 
-    private Long id;
-    private String name;
-
-    private String username;
-    private String password;
-
-    private String phoneNumber;
-    private OffsetDateTime lastLogin;
+    private Integer code;
+    private String exception;
+    private String message;
+    private OffsetDateTime timestamp;
 }
